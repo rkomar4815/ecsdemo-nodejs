@@ -14,7 +14,8 @@ ENV NEW_RELIC_NO_CONFIG_FILE=true
 WORKDIR /usr/src/app
 COPY package*.json ./
 RUN apk -U add curl jq bash nodejs npm python3 py3-pip && \
-  pip3 install awscli netaddr
+  pip3 install awscli netaddr && \
+  npm install
 
 # copy the code
 COPY . .
