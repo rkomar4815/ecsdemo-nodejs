@@ -1,4 +1,5 @@
 // use the express framework
+const newrelic = require('newrelic');
 var express = require('express');
 var app = express();
 
