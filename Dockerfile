@@ -7,6 +7,9 @@ FROM alpine:3.6
 ARG NODE=production
 ENV NODE_ENV ${NODE}
 
+# set New Relic APM agent to run without config file
+ENV NEW_RELIC_NO_CONFIG_FILE=true
+
 # copy package info early to install npms and delete npm command
 WORKDIR /usr/src/app
 COPY package*.json ./
